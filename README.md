@@ -1,3 +1,4 @@
 # tokenstool
-
-[https://ctkp-tools.github.io/anondiscord/](https://ctkp-tools.github.io/anondiscord/)
+このツールはまもなく公開を終了します。
+荒らしができなくなりますね。
+まあ、荒らさなければいい話じゃないですか。
