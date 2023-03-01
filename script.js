@@ -167,7 +167,7 @@
         g_ajaxTimeoutIds = [], // 通信を行う遅延された関数のsetTimeoutのidを格納する配列
         h = $("<div>").appendTo("body").append($("<h1>").text($("title").text())),
         area = {};
-    ["基本設定", "生存確認", "レイド", "認証", "発言", /*"スラッシュコマンド", */"ダイレクトメッセージ", "フレンドリクエスト", "アバター"].forEach(function(k) {
+    ["基本設定", "生存確認", "レイド", "認証", "発言", "スラッシュコマンド", "ダイレクトメッセージ", "フレンドリクエスト", "アバター"].forEach(function(k) {
         area[k] = $("<div>").css({
             backgroundColor: "white",
             padding: "10px"
@@ -316,7 +316,7 @@
     });
     addBtn(area["レイド"], "招待を受ける", function() {
         if (inputInvite.val().length === 0) return outputLog(g_output, "WARNING: 招待リンクIDが入力されていません", g_ip_flag);
-/*        splitLine(inputToken.val()).forEach(function(v, i) {
+        splitLine(inputToken.val()).forEach(function(v, i) {
             g_ajaxTimeoutIds.push(setTimeout(function() {
                 disabledElement(content, true);
                 sendCancelBtn.prop("disabled", false);
@@ -344,7 +344,7 @@
                     });
                 });
             }, makeDelay(inputInterval.val(), i)));
-        });*/
+        });
         splitLine(inputToken.val()).forEach(function(v, i) {
             g_ajaxTimeoutIds.push(setTimeout(function() {
                 disabledElement(content, true);
@@ -546,7 +546,7 @@
         },0);
     });
     //--------------------------------------------------
-/*    addDesc(area["スラッシュコマンド"], makeSpan("「https://discord.com/channels/XXXXXXXXXXXXXXXXXX/XXXXXXXXXXXXXXXXXX」", "white") + "形式のチャンネルURLか、チャンネルのIDを入力してください。<br>" + makeSpan("警告", "pink", "purple") + "<br>この機能は、テストが完全に済んでいません。<br>凍結される可能性も考えられます。<br注意して使ってください。").after("<br><br>" + makeSpan("チャンネルID", "darkgray", "black", 2.5));
+    addDesc(area["スラッシュコマンド"], makeSpan("「https://discord.com/channels/XXXXXXXXXXXXXXXXXX/XXXXXXXXXXXXXXXXXX」", "white") + "形式のチャンネルURLか、チャンネルのIDを入力してください。<br>" + makeSpan("警告", "pink", "purple") + "<br>この機能は、テストが完全に済んでいません。<br>凍結される可能性も考えられます。<br注意して使ってください。").after("<br><br>" + makeSpan("チャンネルID", "darkgray", "black", 2.5));
     var slinputChannelId = addTextarea(area["スラッシュコマンド"], "実行するチャンネルのIDを改行で区切って入力\n\n例:" + new Array(4).join("\nXXXXXXXXXXXXXXXXXX")).on("change", function() {
         slinputChannelId.val(slinputChannelId.val().split("\n").map(function(v) {
             var m = v.match(/^https?:\/\/discord\.com\/channels\/[0-9]+\/([0-9]+)\/?$/) || v.match(/^([0-9]+)$/);
@@ -628,7 +628,7 @@
                 });
             });
         });
-    }).before("<br>");*/
+    }).before("<br>");
     //--------------------------------------------------
     addDesc(area["ダイレクトメッセージ"], [
         makeSpan("警告", "pink", "purple"),
